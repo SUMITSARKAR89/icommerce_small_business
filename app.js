@@ -53,6 +53,9 @@ darkmood !== "active" ? enableDarkmode() : disableDarkmood()
 
 
 
+
+
+
 // <===============================nav dropsown=================================>
     const navLink = document.querySelectorAll(".nav-link");
 
@@ -105,6 +108,11 @@ function scrollbarNavigation(){
         searchBody.style.left = "-100%";
     });
 
+
+
+   
+    
+
     // ------------------------- faq panels--------------------------------
 
 
@@ -131,62 +139,64 @@ function scrollbarNavigation(){
         faqPanal[index].classList.add('faq-active');
     });
    
-})
+});
+
+
 
 // ----------------------------blog page---------------------------------
-    const blogClosed = document.querySelector('.blogClosed');
-    const blogModal = document.querySelector('.blogModal');
-    blogClosed.addEventListener('click', () => {
-        blogModal.style.display = "none";
+//     const blogClosed = document.querySelector('.blogClosed');
+//     const blogModal = document.querySelector('.blogModal');
+//     blogClosed.addEventListener('click', () => {
+//         blogModal.style.display = "none";
        
-    });
+//     });
    
     
-    const homeBlogCard = document.querySelectorAll('.homeBlog-card');
-    const blogModalBody = document.querySelectorAll('.blog-modal-body');
+//     const homeBlogCard = document.querySelectorAll('.homeBlog-card');
+//     const blogModalBody = document.querySelectorAll('.blog-modal-body');
 
-homeBlogCard.forEach( (btn, index) => {
-    btn.addEventListener('click', () => {
+// homeBlogCard.forEach( (btn, index) => {
+//     btn.addEventListener('click', () => {
 
-       homeBlogCard.forEach( btn => {
-            btn.classList.remove('blog-active');
-            blogModal.style.display = "flex";
-        })
-        btn.classList.add('blog-active');
+//        homeBlogCard.forEach( btn => {
+//             btn.classList.remove('blog-active');
+//             blogModal.style.display = "flex";
+//         })
+//         btn.classList.add('blog-active');
 
-        blogModalBody.forEach(content => {
-            content.classList.remove('blog-active');
-            blogModal.style.display = "flex";
-        })
-        blogModalBody[index].classList.add('blog-active');
+//         blogModalBody.forEach(content => {
+//             content.classList.remove('blog-active');
+//             blogModal.style.display = "flex";
+//         })
+//         blogModalBody[index].classList.add('blog-active');
         
 
-    })
+//     })
    
-});
+// });
 
+ // <====================================slider twor================================>
+    const sliderTwo = document.querySelector('.slider-two');
+ const sliderTwoPrev = document.querySelector('#w-leftBtn');
+ const sliderTwoNext = document.querySelector('#w-rightBtn');
+ 
+ sliderTwo.addEventListener('wheel', (index) => {
+     index.preventDefault();
+     sliderTwo.scrollLeft += index.deltaY;
+     sliderTwo.style.scrollBehaviour = "auto";
+ });
+ 
+ sliderTwoNext.addEventListener('click', () => {
+     sliderTwo.style.scrollBehaviour = "smooth";
+     sliderTwo.scrollLeft += 1200;
+     
+ });
+ sliderTwoPrev.addEventListener('click', () => {
+     sliderTwo.style.scrollBehaviour = "smooth";
+     sliderTwo.scrollLeft -= 1200;
+     
+ });
 
-// <====================================slider twor================================>
-const sliderTwo = document.querySelector('.slider-two');
-const sliderTwoPrev = document.querySelector('#w-leftBtn');
-const sliderTwoNext = document.querySelector('#w-rightBtn');
-
-sliderTwo.addEventListener('wheel', (index) => {
-    index.preventDefault();
-    sliderTwo.scrollLeft += index.deltaY;
-    sliderTwo.style.scrollBehaviour = "auto";
-});
-
-sliderTwoNext.addEventListener('click', () => {
-    sliderTwo.style.scrollBehaviour = "smooth";
-    sliderTwo.scrollLeft += 1200;
-    
-});
-sliderTwoPrev.addEventListener('click', () => {
-    sliderTwo.style.scrollBehaviour = "smooth";
-    sliderTwo.scrollLeft -= 1200;
-    
-});
 
 
 

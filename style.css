@@ -383,6 +383,7 @@
     padding: 5px 10px;
     transition: var(--transition-2);
     animation: zoom 0.3s ease-in-out;
+    
 
   }
   nav .nav-head{
