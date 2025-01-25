@@ -43,11 +43,7 @@
     
      /* text-color  */
      --main-text-color: #333333;
-     
-     
-      
- 
-     /* gradient color  */
+
      
     
      /* transition  */
@@ -387,6 +383,7 @@
     padding: 5px 10px;
     transition: var(--transition-2);
     animation: zoom 0.3s ease-in-out;
+
   }
   nav .nav-head{
     position: relative;
@@ -1270,6 +1267,7 @@ footer .footer-head{
 .footer-card .footer-link:hover{
   opacity: 0.7;
   font-weight: 700;
+  text-decoration: underline;
 }
 .footer-container .bank-card{
   max-width: 100%;
@@ -1335,7 +1333,8 @@ footer .copy{
 ================================================================================ */
 
 #homeBlog,
-#faqBlog{
+#faqBlog,
+#homePrivacy{
   position: relative;
   max-width: 100%;
   width: 76%;
@@ -1346,7 +1345,8 @@ footer .copy{
   
 }
 #homeBlog li,
-#faqBlog li{
+#faqBlog li,
+#homePrivacy li{
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -1357,13 +1357,15 @@ footer .copy{
   padding: 2px 7px;
 }
 #homeBlog li a,
-#faqBlog li a{
+#faqBlog li a,
+#homePrivacy li a{
   color: var(--secondary-color);
   font-weight: 300;
   opacity: 1;
 }
 #homeBlog li a:hover,
-#faqBlog li a:hover{
+#faqBlog li a:hover,
+#homePrivacy li a:hover{
   opacity: 0.8;
 }
 #homeBlog-container,
@@ -1693,4 +1695,109 @@ footer .copy{
     transition: transform 0.5s ease;
 }
 
- 
+/* ================================================================================
+=======================================privacy page/term page =======================================
+================================================================================ */
+
+.homePrivacy-container{
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto 5%;
+  height: auto;
+}
+
+.homePrivacy-container h2{
+  font-size: var(--font-h2);
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin: 6% 0;
+}
+
+.homePrivacy-container span,
+.homePrivacy-container p{
+  font-size: var(--font-p);
+  font-weight: 300;
+  color: var(--secondary-color);
+  padding: 10px 30px;
+}
+.homePrivacy-container span{
+  font-weight: 800;
+}
+
+/* ================================================================================
+=======================================contact page =======================================
+================================================================================ */
+#contact-container{
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+#contact-container h2{
+  margin: 10% auto 2%;
+  text-align: center;
+  font-size: var(--font-h1);
+  text-transform: uppercase;
+}
+
+
+ form{
+  max-width: 100%;
+  width: 80%;
+  margin:  0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #04AA6D;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 10%;
+
+ }
+ form label{
+  font-size: var(--font-h6);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0;
+
+
+}
+form input,
+form textarea,
+form select{
+  width: 100%;
+  padding: 15px 20px;
+  font-size: var(--font-p);
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  outline: 0;
+  resize: none;
+  
+}
+form input:focus,
+form textarea:focus,
+form select:focus{
+  border: 1px solid #04AA6D;
+}
+form textarea::placeholder{
+  text-transform: capitalize;
+  font-family: "Sora", serif;
+}
+
+form select{
+  margin-top: -10px;
+}
+#formSubmitBtn{
+  cursor: pointer;
+  font-size: var(--font-h6);
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  opacity: 1;
+  text-transform: uppercase;
+  transition: var(--transition-1);
+}
+#formSubmitBtn:hover{
+  opacity: 0.9;
+}
