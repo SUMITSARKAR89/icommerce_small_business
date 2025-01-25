@@ -175,6 +175,54 @@ function scrollbarNavigation(){
    
 // });
 
+// Select necessary elements
+const blogClosed = document.querySelector('.blogClosed');
+const blogModal = document.querySelector('.blogModal');
+const homeBlogCards = document.querySelectorAll('.homeBlog-card');
+const blogModalBodies = document.querySelectorAll('.blog-modal-body');
+
+// Function to safely select an element or log a warning
+const safeSelect = (element, name) => {
+    if (!element) console.warn(`${name} not found in the DOM.`);
+    return element;
+};
+
+// Ensure elements exist
+safeSelect(blogClosed, 'blogClosed');
+safeSelect(blogModal, 'blogModal');
+if (homeBlogCards.length === 0) console.warn('No elements found for .homeBlog-card');
+if (blogModalBodies.length === 0) console.warn('No elements found for .blog-modal-body');
+
+// Function to close the modal
+const closeModal = () => {
+    if (blogModal) blogModal.style.display = "none";
+};
+
+// Function to activate a specific modal content
+const activateModalContent = (index) => {
+    if (!blogModal) return;
+
+    // Remove active state from all cards and modal bodies
+    homeBlogCards.forEach(card => card.classList.remove('blog-active'));
+    blogModalBodies.forEach(body => body.classList.remove('blog-active'));
+
+    // Add active state to the selected card and modal body
+    homeBlogCards[index]?.classList.add('blog-active');
+    blogModalBodies[index]?.classList.add('blog-active');
+
+    // Display the modal
+    blogModal.style.display = "flex";
+};
+
+// Close modal when the close button is clicked
+if (blogClosed) blogClosed.addEventListener('click', closeModal);
+
+// Add click event listeners to each blog card
+homeBlogCards.forEach((card, index) => {
+    card.addEventListener('click', () => activateModalContent(index));
+});
+
+
  // <====================================slider twor================================>
     const sliderTwo = document.querySelector('.slider-two');
  const sliderTwoPrev = document.querySelector('#w-leftBtn');
