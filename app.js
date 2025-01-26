@@ -223,7 +223,7 @@ homeBlogCards.forEach((card, index) => {
 });
 
 
- // <====================================slider twor================================>
+ // <====================================slider two================================>
     const sliderTwo = document.querySelector('.slider-two');
  const sliderTwoPrev = document.querySelector('#w-leftBtn');
  const sliderTwoNext = document.querySelector('#w-rightBtn');
@@ -282,8 +282,20 @@ function previousPage2(){
     sliderEight2.prepend(sliderEight2.lastElementChild);
 };
 
+
+// // <====================================dropdown sort ================================>
+//     const sortDropdown = document.getElementById('sortDropdown');
+
+// sortDropdown.addEventListener('change', function () {
+//   const selectedValue = sortDropdown.value;
+//   alert(`You selected: ${selectedValue}`);
+//   // You can implement sorting logic here
+// });
+    
+
     
 
 // ==========================================================
+
 // ==========================================================
 
