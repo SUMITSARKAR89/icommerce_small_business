@@ -946,6 +946,31 @@
   width: 100%;
   height: 400px;
 }
+
+
+.slider-give-wrap{
+  max-width: 100%;
+  width: 100%;
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 15px;
+ background: var(--primary-color);
+ padding: 5px;
+ margin: 2% 0;
+
+}
+.slider-give-wrap img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transform: scale(1);
+  transition: var(--transition-1);
+  border-radius: 8px
+}
+.slider-give-wrap img:hover{
+  transform: scale(1.1);
+}
 .slide-trand-img img{
   height: 100%;
   width: 100%;
@@ -1306,6 +1331,12 @@ footer .copy{
   font-weight: 300;
   opacity: 1;
 }
+#homeBlog h2{
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
 #homeBlog li a:hover,
 #faqBlog li a:hover,
 #homePrivacy li a:hover{
@@ -1625,7 +1656,7 @@ footer .copy{
    .acc-ship.ship-active .acc-answare,
    .acc-return.return-active .acc-answare,
    .acc-support.support-active .acc-answare{
-    height: 50px;
+    height: 100px;
   }
   .acc-price.price-active .fa-chevron-down,
   .acc-ship.ship-active .fa-chevron-down,
@@ -1819,7 +1850,8 @@ form select{
   font-weight: 400;
   cursor: pointer;
 }
-.product-item-eight .product-trand-content{
+.product-item-eight .product-trand-content,
+.slide-trand-content{
   max-width: 100%;
   width: 100%;
   display: flex;
@@ -1831,7 +1863,8 @@ form select{
   padding: 5px;
   
 }
-.product-trand-content li{
+.product-trand-content li,
+.slide-trand-content li{
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1839,30 +1872,36 @@ form select{
   gap: 5px;
 }
 .product-trand-content li .trend-h5,
-.product-trand-content li .trend-h6{
+.product-trand-content li .trend-h6,
+.slide-trand-content li .trend-h5,
+.slide-trand-content li .trend-h6{
   font-size: var(--font-h6);
   font-weight: 600;
   text-transform: capitalize;
   color: var(--secondary-color);
   text-align: left;
 }
-.product-trand-content li .trend-h6{
+.product-trand-content li .trend-h6,
+.slide-trand-content li .trend-h6{
   opacity: 0.6;
 }
 
-.product-trand-content li .percent{
+.product-trand-content li .percent,
+.slide-trand-content li .percent{
   font-size: var(--font-p-small);
   background: var(--bg-color-for-card);
   color: var(--secondary-color);
   padding: 2px 2px;
   border-radius: 5px;
 }
-.product-trand-content li .price{
+.product-trand-content li .price,
+.slide-trand-content li .price{
   color: var(--secondary-color);
   font-size: var(-h5);
   font-weight: 300;
 }
-.product-trand-content li .foot{
+.product-trand-content li .foot,
+.slide-trand-content li .foot{
   font-size: var(--font-p-small);
   font-weight: 500;
   color: var(--secondary-color);
@@ -1940,12 +1979,12 @@ form select{
 
 .sort-label {
   font-size: var(--font-p);
-  color: #333;
+  color: var(--secondary-color);
  
   width: 30%;
 }
 
-.dropdown {
+.short-dropdown {
   width: 70%;
   padding: 5px;
  border: 1px solid green;
@@ -1953,10 +1992,11 @@ form select{
   background-color: var(--primary-color);
   font-size: var(--font-p-small);
   cursor: pointer;
+  color: var(--secondary-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown:hover {
+.short-dropdown:hover {
   border-color: #aaa;
 }
 
@@ -1988,7 +2028,7 @@ form select{
 }
 .product-search input::placeholder{
   opacity: 0.5;
-  color: var(--secondary-color);
+  color: #000;
 }
 .tesimonial-slider{
   display: flex;
